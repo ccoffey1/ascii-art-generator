@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, Optional } from '@angular/core';
 
 @Component({
   selector: 'app-brightness-setting',
@@ -8,14 +8,15 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 export class BrightnessSettingComponent implements OnInit {
 
   @ViewChild('brightnessInput') brightnessInput: ElementRef; 
-  @Input() character = '░';
+  @Input() character: string;
+  @Input() brightness: number;
 
-  brightness: number;
   min: number;
   max: number;
-  
+
   ngOnInit(): void {
     this.brightness = 255;
+    this.character = '░';
     this.min = 0;
     this.max = 255;
   }
@@ -23,7 +24,7 @@ export class BrightnessSettingComponent implements OnInit {
   onBrightnessChanged(value: number) {
     let newBrightness = value;
 
-    if (value > 255) {
+    if (isNaN(value) || value > 255) {
       newBrightness = 255;
     }
     else if (value < 0) {
