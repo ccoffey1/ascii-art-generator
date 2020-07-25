@@ -1,0 +1,40 @@
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 100%;
+  height: 80%;
+}
+
+.brightness-amount {
+  border: none;
+  font-size: 1.5em;
+  width: 3em;
+}
+
+.char-input {
+  text-align: center;
+  font-size: 2em;
+  width: 1.5em;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,15 @@
+<div class="container-fluid border">
+  <div class="input-wrapper">
+    <input class="brightness-amount text-center" 
+           #brightnessInput
+           type="number"
+           (input)="onBrightnessChanged($event.target.value)"
+           [value]="brightness">
+    <input class="w-100" 
+           type="range" 
+           min="0" 
+           max="255"
+           [(ngModel)]="brightness">
+  </div>
+  <input class="char-input" type="text" maxlength="1" [value]="character">
+</div>

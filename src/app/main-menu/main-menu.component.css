@@ -1,0 +1,9 @@
+.sidebar {
+  height: calc(100% - 64px);
+  min-width: 350px;
+  max-width: 500px;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  overflow-x: hidden;
+}
