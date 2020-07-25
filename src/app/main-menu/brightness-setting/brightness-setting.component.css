@@ -27,6 +27,13 @@
   width: 1.5em;
 }
 
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  color: white;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

@@ -3,4 +3,27 @@
 
 html, body {
   height: 100%;
+  --main-bg-color: #1b262c;
+  --secondary-bg-color: #0f4c75;
+  --third-bg-color: #3282b8;
+}
+
+.bg-primary {
+  background-color: var(--main-bg-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-bg-color) !important;
+}
+
+.bg-third {
+  background-color: var(--third-bg-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--main-bg-color) !important;
+}
+
+.btn-secondary {
+  background-color:  var(--secondary-bg-color) !important;
 }

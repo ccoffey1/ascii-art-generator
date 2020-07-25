@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BrightnessSettingComponent } from './brightness-setting/brightness-setting.component';
+import { IBrightnessSetting } from './brightness-setting/brightness-setting';
 
 @Component({
   selector: 'app-main-menu',
@@ -8,16 +8,30 @@ import { BrightnessSettingComponent } from './brightness-setting/brightness-sett
 })
 export class MainMenuComponent implements OnInit {
 
-  brightnessControls: BrightnessSettingComponent[];
+  brightnessSettings: IBrightnessSetting[];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.brightnessControls = [];
+    this.brightnessSettings = [
+      {
+        brightness: 255,
+        character: "░"
+      },
+      {
+        brightness: 150,
+        character: "▒"
+      }, 
+      {
+        brightness: 50,
+        character: "▓"
+      }];
   }
 
   addBrightnessControl() {
-    this.brightnessControls.push(new BrightnessSettingComponent());
+    this.brightnessSettings.push({
+      brightness: 255,
+      character: "░"
+    });
   }
-
 }

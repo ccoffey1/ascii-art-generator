@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <h1 class="navbar-brand">Ascii Art Generator</h1>
 </nav>
 
@@ -6,13 +6,16 @@
   
   <div class="row">
 
+    <!-- brightness controls -->
     <div class="col-3 p-0 fixed-height overflow-auto">
-      <div class="container-fluid bg-dark py-1">
+      <div class="container-fluid bg-primary py-1">
         <h4 class="text-light">Brightness Settings</h4>
       </div>
       <div class="container-fluid p-0">
-        <div *ngFor='let brightnessSetting of brightnessControls'>
-          <app-brightness-setting></app-brightness-setting>
+        <div *ngFor='let brightnessSetting of brightnessSettings'>
+          <app-brightness-setting [brightness]="brightnessSetting.brightness"
+                                  [character]="brightnessSetting.character">
+          </app-brightness-setting>
         </div>
       </div>
       <div class="container-fluid p-0 bg-secondary add-menu" (click)="addBrightnessControl()">
@@ -22,11 +25,15 @@
       </div>
     </div>
 
-    <div class="col-9 p-0">
-      <div class="container-fluid bg-secondary">
+    <!-- image display -->
+    <div class="col-9 p-0 border-left border-dark border-left-3">
+      <div class="container-fluid bg-secondary image-view">
         <img class="img-fluid" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22829%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20829%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17386e7a5cc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A41pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17386e7a5cc%22%3E%3Crect%20width%3D%22829%22%20height%3D%22250%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22309.6328125%22%20y%3D%22143.3%22%3E829x250%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
       </div>
-      <button class="btn btn-primary">Process Image</button>
+      <div class="bg-third">
+        <button class="btn btn-secondary mx-5 my-2">Upload Image</button>
+        <button class="btn btn-primary">Process Image</button>
+      </div>
     </div>
 
   </div>

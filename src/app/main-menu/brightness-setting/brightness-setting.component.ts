@@ -15,8 +15,8 @@ export class BrightnessSettingComponent implements OnInit {
   max: number;
 
   ngOnInit(): void {
-    this.brightness = 255;
-    this.character = '░';
+    this.brightness = this.brightness ? this.brightness : 255;
+    this.character = this.character ? this.character : '░';
     this.min = 0;
     this.max = 255;
   }

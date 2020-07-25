@@ -26,3 +26,11 @@
   overflow-y: auto;
   max-height: calc(100vh - 64px);
 }
+
+.image-view {
+  height: calc(100vh - 118px);
+}
+
+.border-left-3 {
+  border-width: 3px !important;
+}

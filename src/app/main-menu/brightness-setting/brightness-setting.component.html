@@ -1,11 +1,11 @@
-<div class="container-fluid border">
+<div class="container-fluid border bg-third">
   <div class="input-wrapper">
     <input class="brightness-amount text-center" 
            #brightnessInput
            type="number"
            (input)="onBrightnessChanged($event.target.value)"
            [value]="brightness">
-    <input class="w-100" 
+    <input class="w-100 bg-primary" 
            type="range" 
            min="0" 
            max="255"
