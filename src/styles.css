@@ -3,13 +3,13 @@
 
 html, body {
   height: 100%;
-  --main-bg-color: #1b262c;
-  --secondary-bg-color: #0f4c75;
-  --third-bg-color: #3282b8;
+  --primary-bg-color: #2C2F34;
+  --secondary-bg-color: #B1B2B3;
+  --third-bg-color: #43464A;
 }
 
 .bg-primary {
-  background-color: var(--main-bg-color) !important;
+  background-color: var(--primary-bg-color) !important;
 }
 
 .bg-secondary {
@@ -21,9 +21,10 @@ html, body {
 }
 
 .btn-primary {
-  background-color: var(--main-bg-color) !important;
+  background-color: var(--third-bg-color) !important;
+  border-color: var(--secondary-bg-color) !important;
 }
 
 .btn-secondary {
-  background-color:  var(--secondary-bg-color) !important;
+  background-color:  var(--primary-bg-color) !important;
 }

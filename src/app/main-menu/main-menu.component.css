@@ -1,5 +1,5 @@
 .sidebar {
-  height: calc(100% - 64px);
+  height: calc(100vh - 64px);
   min-width: 350px;
   max-width: 500px;
   position: fixed;
@@ -31,6 +31,15 @@
   height: calc(100vh - 118px);
 }
 
-.border-left-3 {
-  border-width: 3px !important;
+.bottom {
+  bottom: 0px;
+}
+
+.sidebar {
+  --nav-height: 64px;
+ 
+  position: absolute;
+  float: left;
+  height: calc(100vh - var(--nav-height));
+  width: 200px;
 }
